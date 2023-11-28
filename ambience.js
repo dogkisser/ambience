@@ -62,7 +62,7 @@ if (vid_count) {
 volume_slider.addEventListener('input', async (event) => {
     const new_volume = event.target.value;
 
-    Array.from(document.getElementsByTagName('main')[0].children).forEach(v => {
+    Array.from(document.getElementsByTagName('video')).forEach(v => {
         v.volume = new_volume / 100;
     });
 
