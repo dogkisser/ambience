@@ -38,6 +38,14 @@ function addVideo(src) {
     video_container.appendChild(video);
 }
 
+if (vid_count) {
+    const video_urls = await getVideos([], vid_count);
+
+    for (let i = 0; i < vid_count; i++) {
+        addVideo(video_urls.pop());
+    }
+}
+
 volume_slider.addEventListener('input', async (event) => {
     const new_volume = event.target.value;
 
