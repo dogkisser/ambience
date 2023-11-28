@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    /* Hack !! */
+    overflow: hidden;
+}
+
+header {
+    display: block;
+    background-color: rgb(41, 41, 41);
+    padding: 7px;
+    overflow: hidden;
+}
+
+header .right {
+    float: right;
+}
+
+header p {
+    display: inline;
+    color: white;
+    font-family: sans-serif;
+}
+
+header p a {
+    font-style: italic;
+    color: rgb(121, 70, 204)
+}
+
+main {
+    height: 100vh;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    min-width: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.333%;
+}
