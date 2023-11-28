@@ -38,9 +38,20 @@ main {
     justify-content: center;
 }
 
-video {
+.video-container {
+    display: flex;
     min-width: 0;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 33.333%;
+}
+
+video {
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        flex-basis: 100%;
+    }
 }
