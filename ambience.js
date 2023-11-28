@@ -103,4 +103,10 @@ number_videos_element.addEventListener('change', async (event) => {
 
     vid_count = new_value;
 });
+
+setInterval(() => {
+    const timer = document.getElementById('timer');
+    const as_secs = timer.innerHTML.split(':').reduce((acc, time) => (60 * acc) + +time) + 1;
+    timer.innerHTML = new Date((as_secs) * 1000).toISOString().substring(11, 19);
+}, 1000);
 };
