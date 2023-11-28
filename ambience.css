@@ -1,8 +1,10 @@
+html {
+    background-color: rgb(17, 17, 17);
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    /* Hack !! */
-    overflow: hidden;
 }
 
 header {

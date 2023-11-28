@@ -1,7 +1,7 @@
 async function getVideos(tags, count) {
     const posts_req = await fetch(`https://e621.net/posts.json?limit=${count}\
 &_client="github:zoomasochist/ambience@0.0.1"\
-&tags=animated score:>=600 sound order:random duration:<=90 -young -music -meme`);
+&tags=animated score:>=600 sound order:random -young -music -meme`);
     const post_json = await posts_req.json();
 
     return post_json.posts.map(e => e.file.url);
