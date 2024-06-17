@@ -1,7 +1,7 @@
 async function getVideos(tags, count) {
     const posts_req = await fetch(`https://e621.net/posts.json?limit=${count}\
 &_client="github:zoomasochist/ambience@0.0.1"\
-&tags=animated score:>=400 -type:swf sound order:random -meme ${tags}`);
+&tags=animated -type:swf sound order:random ${tags}`);
     const post_json = await posts_req.json();
 
     console.log('getVideos() done');
